@@ -2,10 +2,11 @@ import os
 import httpx
 from fastmcp import FastMCP
 
-SN_URL = os.environ["SN_URL"]
+SN_URL = "https://dev195269.service-now.com"
 SN_USER = os.environ["SN_USER"]
 SN_PASS = os.environ["SN_PASS"]
-
+if not SN_USER or not SN_PASS:
+    raise RuntimeError("SN_USER or SN_PASS not set in environment")
 mcp = FastMCP(name="ServiceNow PDI MCP")
 
 def sn_client():
