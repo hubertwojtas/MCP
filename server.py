@@ -5,7 +5,7 @@ from fastmcp import FastMCP
 SN_URL = "https://dev195269.service-now.com"  # Twój PDI
 
 SN_USER = "admin"              # tymczasowo na sztywno
-SN_PASS = "1234567890212"      # tymczasowo na sztywno
+SN_PASS = "5y@s@b8oTOHX"      # tymczasowo na sztywno
 
 mcp = FastMCP(name="ServiceNow PDI MCP")
 
