@@ -2,16 +2,13 @@ import os
 import httpx
 from fastmcp import FastMCP
 
-SN_URL = "https://dev195269.service-now.com"
-SN_USER = os.environ.get("SN_USER")
-SN_PASS = os.environ.get("SN_PASS")
+SN_URL = "https://dev195269.service-now.com"  # Twój PDI
 
-print("SN_USER from env:", SN_USER)
-print("SN_PASS set:", bool(SN_PASS))
+SN_USER = "admin"              # tymczasowo na sztywno
+SN_PASS = "1234567890212"      # tymczasowo na sztywno
 
-if not SN_USER or not SN_PASS:
-    raise RuntimeError("SN_USER or SN_PASS not set in environment")
 mcp = FastMCP(name="ServiceNow PDI MCP")
+
 
 def sn_client():
     return httpx.Client(
